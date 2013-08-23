@@ -38,6 +38,7 @@ public class SamplePlugin implements Plugin,PacketInterceptor {
         interceptorManager = InterceptorManager.getInstance();
         logsManager = DbChatLogsManager.getInstance();
         interceptorManager.addInterceptor(this);
+        System.out.println("test");
 //        org.jivesoftware.util.LocaleUtils.getLocalizedString("projectName", "[myPlugin]");
         debug("init plugin start up");
         System.out.println(server.getServerInfo());
