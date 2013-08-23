@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+<class>org.jivesoftware.openfire.plugin.SamplePlugin</class>
+ 
+<!-- Plugin meta-data -->
+<name>lsq</name>
+<description>This is the my sample plugin.</description>
+<author>lsq</author>
+ 
+<version>1.0</version>
+<date>31/07/2013</date>
+<minServerVersion>3.4.1</minServerVersion>
+<databaseKey>lsq</databaseKey>
+<databaseVersion>1</databaseVersion>
+<licenseType>gpl</licenseType>
+ 
+<adminconsole>
+	<tab id="mytab" name="Example" url="lsq-admin.jsp" description="Click to manage...">
+            <sidebar id="mysidebar" name="My Plugin">
+               <item id="lsq" name="My Plugin Admin"
+                   url="lsq-admin.jsp"
+                   description="Click to administer settings for my plugin" />
+               <item id="test1" name="lsqtest1"
+                   url="lsq-test1.jsp"
+                   description="Click to administer settings for my plugin" />
+            </sidebar>
+            <sidebar id="mysidebar2" name="lsqPlugin2">
+               <item id="test2" name="lsqtest2"
+                   url="lsq-test2.jsp"
+                   description="Click to administer settings for my plugin" />
+               <item id="test3" name="lsqtest3"
+                   url="lsq-test3.jsp"
+                   description="Click to administer settings for my plugin" />
+            </sidebar>
+            <sidebar id="mysidebar3" name="发送消息">
+               <item id="msger-send" name="给用户发送消息" description="给用户发送消息" url="msger-send.jsp"/>                     
+            </sidebar>
+            <sidebar id="mysidebar4" name="发送消息给所有用户">
+               <item id="userall-message" name="发送消息给所有用户" description="发送消息给所有用户" url="userall-message.jsp"/>                     
+            </sidebar>
+            <sidebar id="sidebar-depts" name="${sidebar.sidebar-depts}">
+            	<item id="dept-summary" name="${sidebar.dept-summary}"
+                  url="dept-summary.jsp"
+                  description="${sidebar.dept-summary.descr}">
+                	<sidebar id="sidebar-dept-options" name="${sidebar.sidebar-dept-options}">
+                    	<item id="dept-edit" name="${sidebar.dept-edit}"
+                         	 url="dept-edit.jsp"
+                         	 description="${sidebar.dept-edit.descr}"/>
+                    	<item id="dept-delete" name="${sidebar.dept-delete}"
+                          	url="dept-delete.jsp"
+                          	description="${sidebar.dept-delete.descr}"/>
+                	</sidebar>
+            	</item>
+            	<item id="dept-create" name="${sidebar.dept-create}"
+                 	 url="dept-create.jsp"
+                  	description="${sidebar.dept-create.descr}"/>
+           </sidebar>
+           <sidebar id="sidebar-chatLogs">
+                <item id="chatLogs-service" name="ChatLogs Service" url="chatLogs-service.jsp"
+                     description="Click to manage the service that allows users chat logs.">
+                     <sidebar id="sidebar-chatLogs-options" name="chatlogs-all-last">
+                          <item id="chatLogs-all-contact-service" name="chatlogs-all"
+                          	   url="chatlogs?action=all!contact"
+                          	   description="chatLogs-all-contact-service"/>
+                          <item id="chatLogs-last-contact-service" name="chatLogs-last"
+                          	url="chatlogs?action=last!contact"
+                          	description="chatLogs-last-contact-service"/>
+                     </sidebar>
+                 </item>
+            </sidebar>
+    </tab>
+</adminconsole>
+</plugin>

@@ -1,0 +1,7 @@
+如果写servlet 在web/WEB-INF/下的web-custom.xml,特别注意 <url-pattern>/chatlogs</url-pattern>
+这个里面的路径不能大写，大写了就找不到
+
+数据库生成：在plugin.xml中指定好
+<databaseKey>lsq</databaseKey>
+<databaseVersion>1</databaseVersion>
+将会去找src/database/下的lsq_数据库类型.sql
