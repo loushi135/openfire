@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50517
 File Encoding         : 65001
 
-Date: 2013-08-23 16:06:00
+Date: 2013-08-23 17:18:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1575,7 +1575,7 @@ INSERT INTO `ofid` VALUES ('20', '2');
 INSERT INTO `ofid` VALUES ('21', '2');
 INSERT INTO `ofid` VALUES ('23', '6');
 INSERT INTO `ofid` VALUES ('24', '2');
-INSERT INTO `ofid` VALUES ('25', '199');
+INSERT INTO `ofid` VALUES ('25', '201');
 INSERT INTO `ofid` VALUES ('26', '2');
 INSERT INTO `ofid` VALUES ('50', '188');
 INSERT INTO `ofid` VALUES ('55', '2');
@@ -2321,7 +2321,7 @@ CREATE TABLE `ofpresence` (
 -- ----------------------------
 INSERT INTO `ofpresence` VALUES ('admin', null, '001375853692348');
 INSERT INTO `ofpresence` VALUES ('cchen', null, '001377232368848');
-INSERT INTO `ofpresence` VALUES ('mzhu', null, '001377244507938');
+INSERT INTO `ofpresence` VALUES ('mzhu', null, '001377249059214');
 INSERT INTO `ofpresence` VALUES ('wzhu', null, '001377233536808');
 INSERT INTO `ofpresence` VALUES ('丁琰', null, '001370253044648');
 INSERT INTO `ofpresence` VALUES ('于丽丽', null, '001373277926607');
@@ -2438,7 +2438,7 @@ CREATE TABLE `ofproperty` (
 -- ----------------------------
 -- Records of ofproperty
 -- ----------------------------
-INSERT INTO `ofproperty` VALUES ('admin.authorizedJIDs', 'admin@win-mas,居群龙@win-mas');
+INSERT INTO `ofproperty` VALUES ('admin.authorizedJIDs', 'admin@2011-20121118je');
 INSERT INTO `ofproperty` VALUES ('cache.KrakenRegistrationCache.maxLifetime', '-1');
 INSERT INTO `ofproperty` VALUES ('cache.KrakenRegistrationCache.min', '-1');
 INSERT INTO `ofproperty` VALUES ('cache.KrakenRegistrationCache.size', '-1');
@@ -2469,16 +2469,16 @@ INSERT INTO `ofproperty` VALUES ('other.clients.allowed', 'J-IM,');
 INSERT INTO `ofproperty` VALUES ('passwordKey', 'pmAgwy52A7BCP68');
 INSERT INTO `ofproperty` VALUES ('plugin.userservice.secret', 'QlMLMkQ5');
 INSERT INTO `ofproperty` VALUES ('provider.admin.className', 'org.jivesoftware.openfire.admin.DefaultAdminProvider');
-INSERT INTO `ofproperty` VALUES ('provider.auth.className', 'org.jivesoftware.openfire.auth.DefaultAuthProvider');
+INSERT INTO `ofproperty` VALUES ('provider.auth.className', 'org.jivesoftware.openfire.auth.JDBCAuthProvider');
 INSERT INTO `ofproperty` VALUES ('provider.group.className', 'org.jivesoftware.openfire.group.DefaultGroupProvider');
 INSERT INTO `ofproperty` VALUES ('provider.lockout.className', 'org.jivesoftware.openfire.lockout.DefaultLockOutProvider');
 INSERT INTO `ofproperty` VALUES ('provider.securityAudit.className', 'org.jivesoftware.openfire.security.DefaultSecurityAuditProvider');
-INSERT INTO `ofproperty` VALUES ('provider.user.className', 'org.jivesoftware.openfire.user.DefaultUserProvider');
+INSERT INTO `ofproperty` VALUES ('provider.user.className', 'org.jivesoftware.openfire.user.JDBCUserProvider');
 INSERT INTO `ofproperty` VALUES ('provider.vcard.className', 'org.jivesoftware.openfire.vcard.DefaultVCardProvider');
 INSERT INTO `ofproperty` VALUES ('update.lastCheck', '1377244047721');
 INSERT INTO `ofproperty` VALUES ('xmpp.auth.anonymous', 'true');
 INSERT INTO `ofproperty` VALUES ('xmpp.auth.sharedSecretEnabled', 'true');
-INSERT INTO `ofproperty` VALUES ('xmpp.domain', 'win-mas');
+INSERT INTO `ofproperty` VALUES ('xmpp.domain', '2011-20121118je');
 INSERT INTO `ofproperty` VALUES ('xmpp.filetransfer.enabled', 'true');
 INSERT INTO `ofproperty` VALUES ('xmpp.httpbind.scriptSyntax.enabled', 'true');
 INSERT INTO `ofproperty` VALUES ('xmpp.proxy.enabled', 'true');
@@ -3566,6 +3566,8 @@ INSERT INTO `ofsecurityauditlog` VALUES ('195', 'admin', '1376039583483', 'delet
 INSERT INTO `ofsecurityauditlog` VALUES ('196', 'admin', '1376289312235', 'deleted plugin search', '2011-20121118JE', null);
 INSERT INTO `ofsecurityauditlog` VALUES ('197', 'admin', '1377047792523', 'updated HTTP bind settings', '2011-20121118JE', null);
 INSERT INTO `ofsecurityauditlog` VALUES ('198', 'admin', '1377048338431', 'updated HTTP bind settings', '2011-20121118JE', null);
+INSERT INTO `ofsecurityauditlog` VALUES ('199', 'admin', '1377249017753', 'set server property provider.auth.className', '2011-20121118JE', 'provider.auth.className = org.jivesoftware.openfire.auth.JDBCAuthProvider');
+INSERT INTO `ofsecurityauditlog` VALUES ('200', 'admin', '1377249032951', 'set server property provider.user.className', '2011-20121118JE', 'provider.user.className = org.jivesoftware.openfire.user.JDBCUserProvider');
 
 -- ----------------------------
 -- Table structure for `ofuser`
