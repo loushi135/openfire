@@ -162,7 +162,7 @@ public class JDBCAuthProvider implements AuthProvider {
             password = StringUtils.hash(password, "SHA-1");
         }
         else if (passwordType == PasswordType.sha256) {
-//  FIXME 修改openfire          password = StringUtils.hash(password, "SHA-256");//修改成自已oa的加密方式
+//  FIXME 修改openfire  modifyByLsq        password = StringUtils.hash(password, "SHA-256");//修改成自已oa的加密方式
             password = StringUtils.encryptSha256(password);
         }
         else if (passwordType == PasswordType.sha512) {

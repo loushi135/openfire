@@ -38,11 +38,11 @@
     <driver>com.mysql.jdbc.Driver</driver>  
     <connectionString>jdbc:mysql://localhost:3306/openfire?user=root&amp;password=123456</connectionString> 
   </jdbcProvider>
-  <jdbcAuthProvider> 
+  <jdbcAuthProvider>
     <passwordSQL>select password from app_user where username=?</passwordSQL>  
     <passwordType>sha256</passwordType> 
   </jdbcAuthProvider>
-  <jdbcUserProvider> 
+  <jdbcUserProvider>
     <loadUserSQL>select fullname,email from app_user where username=? </loadUserSQL>  
     <userCountSQL>select count(0) from app_user </userCountSQL>  
     <allUsersSQL>select username from app_user </allUsersSQL>  
@@ -75,3 +75,8 @@
     </debug> 
   </log>
 </jive>
+
+<!-- sql 更新 数据库中provider  修改了setup-profile-settings.jsp之后就不用执行了
+update ofproperty set propValue ='org.jivesoftware.openfire.auth.JDBCAuthProvider' where name='provider.auth.className';
+update ofproperty set propValue ='org.jivesoftware.openfire.user.JDBCUserProvider' where name='provider.user.className';
+-->
