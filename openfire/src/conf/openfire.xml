@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
     This file stores bootstrap properties needed by Openfire.
     Property names must be in the format: "prop.name.is.blah=value"
@@ -15,22 +16,67 @@
     property viewer and editor is included in the admin console.
 -->
 <!-- root element, all properties must be under this element -->
-<jive>
-    <adminConsole>
-        <!-- Disable either port by setting the value to -1 -->
-        <port>9090</port>
-        <securePort>9091</securePort>
-    </adminConsole>
-
-    <locale>en</locale>
-
-    <!-- Network settings. By default, Openfire will bind to all network interfaces.
-      Alternatively, you can specify a specific network interfaces that the server
-      will listen on. For example, 127.0.0.1. This setting is generally only useful
-       on multi-homed servers. -->
-    <!--
-    <network>
-        <interface></interface>
-    </network>
-    -->
+<jive> 
+  <adminConsole> 
+    <!-- Disable either port by setting the value to -1 -->  
+    <port>9090</port>  
+    <securePort>9091</securePort> 
+  </adminConsole>
+  <admin> 
+    <authorizedUsernames>admin</authorizedUsernames> 
+  </admin> 
+  <locale>zh_CN</locale>
+  <provider>
+    <auth>
+      <className>org.jivesoftware.openfire.auth.JDBCAuthProvider</className>
+    </auth> 
+    <user>
+      <className>org.jivesoftware.openfire.user.JDBCUserProvider</className>
+    </user>
+  </provider>
+  <jdbcProvider> 
+    <driver>com.mysql.jdbc.Driver</driver>  
+    <connectionString>jdbc:mysql://localhost:3306/openfire?user=root&amp;password=123456</connectionString> 
+  </jdbcProvider>
+  <jdbcAuthProvider>
+    <passwordSQL>select password from app_user where username=?</passwordSQL>  
+    <passwordType>sha256</passwordType> 
+  </jdbcAuthProvider>
+  <jdbcUserProvider>
+    <loadUserSQL>select fullname,email from app_user where username=? </loadUserSQL>  
+    <userCountSQL>select count(0) from app_user </userCountSQL>  
+    <allUsersSQL>select username from app_user </allUsersSQL>  
+    <searchSQL>select username from app_user where </searchSQL>  
+    <usernameField>username</usernameField>  
+    <nameField>fullname</nameField>  
+    <emailField>email</emailField> 
+  </jdbcUserProvider>
+  <connectionProvider>
+    <className>org.jivesoftware.database.DefaultConnectionProvider</className> 
+  </connectionProvider>
+  <database>
+    <defaultProvider> 
+      <driver>com.mysql.jdbc.Driver</driver>  
+      <serverURL>jdbc:mysql://localhost:3306/openfire</serverURL>  
+      <username>root</username>  
+      <password>123456</password>  
+      <testSQL>select 1</testSQL>  
+      <testBeforeUse>true</testBeforeUse>  
+      <testAfterUse>false</testAfterUse>  
+      <minConnections>5</minConnections>  
+      <maxConnections>25</maxConnections>  
+      <connectionTimeout>1.0</connectionTimeout> 
+    </defaultProvider> 
+  </database>  
+  <setup>true</setup> <!-- true表示已经安装，不用运行安装向导     false表示要重新安装-->
+  <log> 
+    <debug> 
+      <enabled>true</enabled> 
+    </debug> 
+  </log>
 </jive>
+
+<!-- sql 更新 数据库中provider  修改了setup-profile-settings.jsp之后就不用执行了
+update ofproperty set propValue ='org.jivesoftware.openfire.auth.JDBCAuthProvider' where name='provider.auth.className';
+update ofproperty set propValue ='org.jivesoftware.openfire.user.JDBCUserProvider' where name='provider.user.className';
+-->

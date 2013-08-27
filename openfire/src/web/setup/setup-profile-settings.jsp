@@ -4,6 +4,7 @@
   -	$Date: 2005-05-26 23:00:40 -0700 (Thu, 26 May 2005) $
 --%>
 
+<%@page import="org.apache.commons.lang.StringUtils"%>
 <%@ page import="org.jivesoftware.openfire.XMPPServer"%>
 <%@ page import="org.jivesoftware.util.JiveGlobals"%>
 <%@ page import="java.util.Map" %>
@@ -32,12 +33,22 @@
 
         if ("default".equals(mode)) {
             // Set to default providers by deleting any existing values.
+            String authClassName = JiveGlobals.getXMLProperty("provider.auth.className");
+            String userClassName = JiveGlobals.getXMLProperty("provider.user.className");
             @SuppressWarnings("unchecked")
             Map<String,String> xmppSettings = (Map<String,String>)session.getAttribute("xmppSettings");
-            xmppSettings.put("provider.auth.className",
-                    org.jivesoftware.openfire.auth.DefaultAuthProvider.class.getName());
-            xmppSettings.put("provider.user.className",
-                    org.jivesoftware.openfire.user.DefaultUserProvider.class.getName());
+            //FIXME update provider class  modifyByLsq
+            if(StringUtils.isNotBlank(authClassName)){
+            	xmppSettings.put("provider.auth.className",authClassName);
+            }else{
+            	xmppSettings.put("provider.auth.className",org.jivesoftware.openfire.auth.DefaultAuthProvider.class.getName());
+            }
+			if(StringUtils.isNotBlank(userClassName)){
+				xmppSettings.put("provider.user.className",userClassName);
+            }else{
+            	xmppSettings.put("provider.user.className",org.jivesoftware.openfire.user.DefaultUserProvider.class.getName());
+            }
+            
             xmppSettings.put("provider.group.className",
                     org.jivesoftware.openfire.group.DefaultGroupProvider.class.getName());
             xmppSettings.put("provider.vcard.className",

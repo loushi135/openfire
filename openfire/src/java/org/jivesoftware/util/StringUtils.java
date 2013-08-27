@@ -434,7 +434,7 @@ public class StringUtils {
             return encodeHex(digest.digest());
         }
     }
-    //  FIXME 修改openfire 新增加密
+    //  FIXME 修改openfire 新增加密  modifyByLsq
     public static synchronized String encryptSha256(String inputStr) {
         try {
           MessageDigest md = MessageDigest.getInstance("SHA-256");

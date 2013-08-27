@@ -321,7 +321,7 @@ public class JDBCUserProvider implements UserProvider {
             StringBuilder sql = new StringBuilder(90);
             sql.append(searchSQL);
             boolean first = true;
-            //FIXME 修改搜索
+            //FIXME 修改搜索  modifyByLsq
             if (fields.contains("Username")) {
             	
                 sql.append(usernameField+" LIKE ?");
