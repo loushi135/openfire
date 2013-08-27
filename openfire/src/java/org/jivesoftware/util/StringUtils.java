@@ -434,20 +434,6 @@ public class StringUtils {
             return encodeHex(digest.digest());
         }
     }
-    //  FIXME 修改openfire 新增加密  modifyByLsq
-    public static synchronized String encryptSha256(String inputStr) {
-        try {
-          MessageDigest md = MessageDigest.getInstance("SHA-256");
-    
-          byte[] digest = md.digest(inputStr.getBytes("UTF-8"));
-    
-          return new String(org.apache.commons.codec.binary.Base64.encodeBase64(digest));
-        }
-        catch (Exception e)
-        {
-        }
-        return null;
-      }
 
     /**
      * Turns an array of bytes into a String representing each byte as an

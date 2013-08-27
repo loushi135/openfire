@@ -28,7 +28,7 @@
   <locale>zh_CN</locale>
   <provider>
     <auth>
-      <className>org.jivesoftware.openfire.auth.JDBCAuthProvider</className>
+      <className>org.jivesoftware.openfire.auth.MyJDBCAuthProvider</className>
     </auth> 
     <user>
       <className>org.jivesoftware.openfire.user.JDBCUserProvider</className>
@@ -69,7 +69,7 @@
     </defaultProvider> 
   </database>  
   <setup>true</setup> <!-- true表示已经安装，不用运行安装向导     false表示要重新安装-->
-  <log> 
+  <log>
     <debug> 
       <enabled>true</enabled> 
     </debug> 
@@ -77,6 +77,6 @@
 </jive>
 
 <!-- sql 更新 数据库中provider  修改了setup-profile-settings.jsp之后就不用执行了
-update ofproperty set propValue ='org.jivesoftware.openfire.auth.JDBCAuthProvider' where name='provider.auth.className';
+update ofproperty set propValue ='org.jivesoftware.openfire.auth.MyJDBCAuthProvider' where name='provider.auth.className';
 update ofproperty set propValue ='org.jivesoftware.openfire.user.JDBCUserProvider' where name='provider.user.className';
 -->

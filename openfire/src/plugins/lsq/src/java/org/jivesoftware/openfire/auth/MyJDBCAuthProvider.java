@@ -19,6 +19,7 @@
 
 package org.jivesoftware.openfire.auth;
 
+import java.security.MessageDigest;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -75,9 +76,9 @@ import org.slf4j.LoggerFactory;
  *
  * @author David Snopek
  */
-public class JDBCAuthProvider implements AuthProvider {
+public class MyJDBCAuthProvider implements AuthProvider {
 
-	private static final Logger Log = LoggerFactory.getLogger(JDBCAuthProvider.class);
+	private static final Logger Log = LoggerFactory.getLogger(MyJDBCAuthProvider.class);
 
     private String connectionString;
 
@@ -90,7 +91,7 @@ public class JDBCAuthProvider implements AuthProvider {
     /**
      * Constructs a new JDBC authentication provider.
      */
-    public JDBCAuthProvider() {
+    public MyJDBCAuthProvider() {
         // Convert XML based provider setup to Database based
         JiveGlobals.migrateProperty("jdbcProvider.driver");
         JiveGlobals.migrateProperty("jdbcProvider.connectionString");
@@ -162,7 +163,8 @@ public class JDBCAuthProvider implements AuthProvider {
             password = StringUtils.hash(password, "SHA-1");
         }
         else if (passwordType == PasswordType.sha256) {
-            password = StringUtils.hash(password,"SHA-256");
+//  FIXME   modifyByLsq        password = StringUtils.hash(password, "SHA-256");//modify to oa password type
+            password = this.encryptSha256(password);
         }
         else if (passwordType == PasswordType.sha512) {
             password = StringUtils.hash(password, "SHA-512");
@@ -409,4 +411,18 @@ public class JDBCAuthProvider implements AuthProvider {
             }
         }
     }
+    
+    public static synchronized String encryptSha256(String inputStr) {
+        try {
+          MessageDigest md = MessageDigest.getInstance("SHA-256");
+    
+          byte[] digest = md.digest(inputStr.getBytes("UTF-8"));
+    
+          return new String(org.apache.commons.codec.binary.Base64.encodeBase64(digest));
+        }
+        catch (Exception e)
+        {
+        }
+        return null;
+      }
 }
