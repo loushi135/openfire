@@ -47,22 +47,22 @@ public class SamplePlugin implements Plugin,PacketInterceptor {
     @Override
 	public void interceptPacket(Packet packet, Session session,
 			boolean incoming, boolean processed) throws PacketRejectedException {
-        if (session != null) {
-            debug(packet, incoming, processed, session);
-        }
-        JID recipient = packet.getTo();
-        if (recipient != null) {
-            String username = recipient.getNode();
-            //un register
-            if (username == null || !UserManager.getInstance().isRegisteredUser(recipient)) {
-                return;
-            } else if (!XMPPServer.getInstance().getServerInfo().getXMPPDomain().equals(recipient.getDomain())) {
-                // not this xmppserver
-                return;
-            } else if ("".equals(recipient.getResource())) {
-            }
-        }
-        this.doAction(packet, incoming, processed, session);
+//        if (session != null) {
+//            debug(packet, incoming, processed, session);
+//        }
+//        JID recipient = packet.getTo();
+//        if (recipient != null) {
+//            String username = recipient.getNode();
+//            //un register
+//            if (username == null || !UserManager.getInstance().isRegisteredUser(recipient)) {
+//                return;
+//            } else if (!XMPPServer.getInstance().getServerInfo().getXMPPDomain().equals(recipient.getDomain())) {
+//                // not this xmppserver
+//                return;
+//            } else if ("".equals(recipient.getResource())) {
+//            }
+//        }
+//        this.doAction(packet, incoming, processed, session);
 		
 	}
 

@@ -131,8 +131,8 @@
     <property name="anttools.target.dir" value="${work.dir}/tools"/>
     <property name="copy.dbscripts" value="true"/>
     <property name="overwrite" value="true"/>
-
-    <property name="installer.install4j.home" value="/home/j2ee-bamboo/install4j.4.0.5"/>
+	<!-- markedByLsq -->
+    <property name="installer.install4j.home" value="C:\Program Files\install4j5"/>
     <property name="installer.src" value="${basedir}/build/installer"/>
     <property name="installer.dest.dir" value="${release.dest.dir}"/>
     <property name="installer.install4j.srcfile" value="${installer.src}/openfire.install4j"/>
@@ -1027,6 +1027,7 @@
         </antcall>
     </target>
 
+	<!-- markedByLsq -->
     <!-- installer ============================================================================= -->
     <target name="installer" description="Creates Openfire installers">
         <condition property="install4j.not.ok" value="true">
