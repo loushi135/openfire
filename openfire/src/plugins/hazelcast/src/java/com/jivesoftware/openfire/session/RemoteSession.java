@@ -19,15 +19,17 @@
 
 package com.jivesoftware.openfire.session;
 
+import java.net.UnknownHostException;
+import java.util.Date;
+
+import org.jivesoftware.openfire.SessionManager;
 import org.jivesoftware.openfire.StreamID;
+import org.jivesoftware.openfire.cluster.ClusterNodeInfo;
 import org.jivesoftware.openfire.session.Session;
 import org.jivesoftware.util.cache.CacheFactory;
 import org.jivesoftware.util.cache.ClusterTask;
 import org.xmpp.packet.JID;
 import org.xmpp.packet.Packet;
-
-import java.net.UnknownHostException;
-import java.util.Date;
 
 /**
  * Base class for sessions being hosted in other cluster nodes. Almost all
@@ -165,20 +167,32 @@ public abstract class RemoteSession implements Session {
      *
      * @param task        the ClusterTask object to be invoked on a given cluster member.
      * @return result of remote operation.
-     * @throws IllegalStateException if requested node was not found or not running in a cluster.
      */
     protected Object doSynchronousClusterTask(ClusterTask task) {
-        return CacheFactory.doSynchronousClusterTask(task, nodeID);
+    	ClusterNodeInfo info = CacheFactory.getClusterNodeInfo(nodeID);
+    	Object result = null;
+    	if (info == null && task instanceof RemoteSessionTask) { // clean up invalid session
+        	SessionManager.getInstance().removeSession(null, 
+        			((RemoteSessionTask)task).getSession().getAddress(), false, false);
+    	} else {
+        	result = (info == null) ? null : CacheFactory.doSynchronousClusterTask(task, nodeID);
+        }
+    	return result;
     }
 
     /**
      * Invokes a task on the remote cluster member in an asynchronous fashion.
      *
      * @param task the task to be invoked on the specified cluster member.
-     * @throws IllegalStateException if requested node was not found or not running in a cluster. 
      */
     protected void doClusterTask(ClusterTask task) {
-        CacheFactory.doClusterTask(task, nodeID);
+    	ClusterNodeInfo info = CacheFactory.getClusterNodeInfo(nodeID);
+    	if (info == null && task instanceof RemoteSessionTask) { // clean up invalid session
+        	SessionManager.getInstance().removeSession(null, 
+        			((RemoteSessionTask)task).getSession().getAddress(), false, false);
+		} else {
+			CacheFactory.doClusterTask(task, nodeID);
+	    }
     }
 
     /**

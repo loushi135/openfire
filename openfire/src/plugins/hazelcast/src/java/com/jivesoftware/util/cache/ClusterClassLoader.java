@@ -19,48 +19,69 @@
 
 package com.jivesoftware.util.cache;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Enumeration;
+
 import org.jivesoftware.openfire.XMPPServer;
 import org.jivesoftware.openfire.container.Plugin;
 import org.jivesoftware.openfire.container.PluginClassLoader;
 import org.jivesoftware.openfire.container.PluginManager;
-
-import java.io.IOException;
-import java.net.URL;
-import java.util.Enumeration;
+import org.jivesoftware.util.JiveGlobals;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Class loader to be used by coherence to load classes that live in the enterprise plugin,
+ * Class loader to be used by Openfire to load classes that live in the Hazelcast plugin,
  * the Openfire core and also classes defined in other plugins. With this new class loader
- * plugins can now make use of coherence.<p>
+ * plugins can now make use of hazelcast.<p>
  *
  * However, there is a catch with this class loader. Plugins that define the same class name
  * (i.e. package and class name) will have a problem if they try to send that class through
- * the cluster. Coherence will deserialize the class and will use the first class definition
+ * the cluster. Hazelcast will deserialize the class and will use the first class definition
  * found in the list of plugins.<p>
  *
- * The sequence of search for this class loader is first check the enterprise plugin that
+ * The sequence of search for this class loader is first check the hazelcast plugin that
  * includes checking the Openfire core. If not found then try with the other plugins.
  *
+ * @author Tom Evans
  * @author Gaston Dombiak
  */
 public class ClusterClassLoader extends ClassLoader {
-    private PluginClassLoader enterpriseClassloader;
+	
+	private static Logger logger = LoggerFactory.getLogger(ClusterClassLoader.class);
+	
+	private static final String HAZELCAST_CONFIG_DIR = JiveGlobals.getProperty(
+			"hazelcast.config.xml.directory", JiveGlobals.getHomeDirectory()
+					+ "/conf");
+
+    private PluginClassLoader hazelcastClassloader;
 
     public ClusterClassLoader() {
-        super();
-        Plugin plugin = XMPPServer.getInstance().getPluginManager().getPlugin("clustering");
-        enterpriseClassloader = XMPPServer.getInstance().getPluginManager().getPluginClassloader(plugin);
+        Plugin plugin = XMPPServer.getInstance().getPluginManager().getPlugin("hazelcast");
+        hazelcastClassloader = XMPPServer.getInstance().getPluginManager().getPluginClassloader(plugin);
+        
+        // this is meant to allow loading configuration files from outside the plugin JAR file
+        File confFolder = new File(HAZELCAST_CONFIG_DIR);
+        try {
+			logger.debug("Adding conf folder {}", confFolder);
+        	hazelcastClassloader.addURLFile(confFolder.toURI().toURL());
+		} catch (MalformedURLException e) {
+			logger.error("Error adding folder {} to classpath {}", HAZELCAST_CONFIG_DIR, e.getMessage());
+		}
     }
 
     public Class<?> loadClass(String name) throws ClassNotFoundException {
         try {
-            return enterpriseClassloader.loadClass(name);
+            return hazelcastClassloader.loadClass(name);
         }
         catch (ClassNotFoundException e) {
             PluginManager pluginManager = XMPPServer.getInstance().getPluginManager();
             for (Plugin plugin : pluginManager.getPlugins()) {
                 String pluginName = pluginManager.getPluginDirectory(plugin).getName();
-                if ("clustering".equals(pluginName) || "admin".equals(pluginName)) {
+                if ("hazelcast".equals(pluginName) || "admin".equals(pluginName)) {
                     continue;
                 }
                 PluginClassLoader pluginClassloader = pluginManager.getPluginClassloader(plugin);
@@ -76,12 +97,12 @@ public class ClusterClassLoader extends ClassLoader {
     }
 
     public URL getResource(String name) {
-        URL resource = enterpriseClassloader.getResource(name);
+        URL resource = hazelcastClassloader.getResource(name);
         if (resource == null) {
             PluginManager pluginManager = XMPPServer.getInstance().getPluginManager();
             for (Plugin plugin : pluginManager.getPlugins()) {
                 String pluginName = pluginManager.getPluginDirectory(plugin).getName();
-                if ("clustering".equals(pluginName) || "admin".equals(pluginName)) {
+                if ("hazelcast".equals(pluginName) || "admin".equals(pluginName)) {
                     continue;
                 }
                 PluginClassLoader pluginClassloader = pluginManager.getPluginClassloader(plugin);
@@ -97,7 +118,7 @@ public class ClusterClassLoader extends ClassLoader {
     public Enumeration<URL> getResources(String name) throws IOException {
         Enumeration<URL> answer = null;
         try {
-            answer = enterpriseClassloader.getResources(name);
+            answer = hazelcastClassloader.getResources(name);
         }
         catch (IOException e) {
             // Ignore
@@ -106,7 +127,7 @@ public class ClusterClassLoader extends ClassLoader {
             PluginManager pluginManager = XMPPServer.getInstance().getPluginManager();
             for (Plugin plugin : pluginManager.getPlugins()) {
                 String pluginName = pluginManager.getPluginDirectory(plugin).getName();
-                if ("clustering".equals(pluginName) || "admin".equals(pluginName)) {
+                if ("hazelcast".equals(pluginName) || "admin".equals(pluginName)) {
                     continue;
                 }
                 PluginClassLoader pluginClassloader = pluginManager.getPluginClassloader(plugin);

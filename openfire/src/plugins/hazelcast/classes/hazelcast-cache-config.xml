@@ -26,12 +26,18 @@
     <network>
         <port auto-increment="true">5701</port>
         <join>
-            <multicast enabled="true">
+           <!--  <multicast enabled="true">
                 <multicast-group>224.2.2.3</multicast-group>
                 <multicast-port>54327</multicast-port>
             </multicast>
             <tcp-ip enabled="false"/>
-            <aws enabled="false"/>
+            <aws enabled="false"/> -->
+            <multicast enabled="false"/>
+		    <tcp-ip enabled="true">
+		      <hostname>ip:5701</hostname>
+		      <hostname>ip:5701</hostname>
+		    </tcp-ip>
+		    <aws enabled="false"/>
         </join>
         <interfaces enabled="false"/>
         <ssl enabled="false" />

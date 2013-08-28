@@ -19,16 +19,20 @@
 
 package com.jivesoftware.util.cluster;
 
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
+
 import org.dom4j.Element;
 import org.dom4j.tree.DefaultElement;
 import org.jivesoftware.openfire.XMPPServer;
 import org.jivesoftware.util.cache.ClusterTask;
 import org.jivesoftware.util.cache.ExternalizableUtil;
-import org.xmpp.packet.*;
-
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
+import org.xmpp.packet.IQ;
+import org.xmpp.packet.JID;
+import org.xmpp.packet.Message;
+import org.xmpp.packet.Packet;
+import org.xmpp.packet.Presence;
 
 /**
  * Task to be executed by remote nodes to deliver the requested packet to the requested
@@ -38,30 +42,29 @@ import java.io.ObjectOutput;
  */
 public class RemotePacketExecution implements ClusterTask {
 
-    private JID receipient;
+    private JID recipient;
     private Packet packet;
 
     public RemotePacketExecution() {
     }
 
-    public RemotePacketExecution(JID receipient, Packet packet) {
-        this.receipient = receipient;
+    public RemotePacketExecution(JID recipient, Packet packet) {
+        this.recipient = recipient;
         this.packet = packet;
     }
 
     public Object getResult() {
-        // Not used since we are using #execute and not #query when using InvocationService
         return null;
     }
 
     public void run() {
         // Route packet to entity hosted by this node. If delivery fails then the routing table
         // will inform the proper router of the failure and the router will handle the error reply logic
-        XMPPServer.getInstance().getRoutingTable().routePacket(receipient, packet, false);
+        XMPPServer.getInstance().getRoutingTable().routePacket(recipient, packet, false);
     }
 
     public void writeExternal(ObjectOutput out) throws IOException {
-    	ExternalizableUtil.getInstance().writeSafeUTF(out, receipient.toString());
+    	ExternalizableUtil.getInstance().writeSerializable(out, recipient);
         if (packet instanceof IQ) {
             ExternalizableUtil.getInstance().writeInt(out, 1);
         }
@@ -75,11 +78,7 @@ public class RemotePacketExecution implements ClusterTask {
     }
 
     public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
-    	String jid = ExternalizableUtil.getInstance().readSafeUTF(in);
-        // Optimization that was avoiding the need to reparse and validate JIDs but cannot be done due
-        // to a change in the JID API. We need to bring this constructor back
-        //receipient = new JID(jid, true);
-        receipient = new JID(jid);
+        recipient = (JID) ExternalizableUtil.getInstance().readSerializable(in);
 
         int packetType = ExternalizableUtil.getInstance().readInt(in);
         Element packetElement = (Element) ExternalizableUtil.getInstance().readSerializable(in);
@@ -97,6 +96,6 @@ public class RemotePacketExecution implements ClusterTask {
     }
 
     public String toString() {
-        return super.toString() + " receipient: " + receipient + "packet: " + packet;
+        return super.toString() + " recipient: " + recipient + "packet: " + packet;
     }
 }

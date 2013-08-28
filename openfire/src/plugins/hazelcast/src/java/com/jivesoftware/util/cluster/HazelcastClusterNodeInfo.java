@@ -19,28 +19,35 @@
 
 package com.jivesoftware.util.cluster;
 
-import com.tangosol.net.Member;
 import org.jivesoftware.openfire.cluster.ClusterManager;
 import org.jivesoftware.openfire.cluster.ClusterNodeInfo;
 import org.jivesoftware.openfire.cluster.NodeID;
+import org.jivesoftware.util.StringUtils;
+
+import com.hazelcast.core.Member;
 
 /**
- * Cluster Node information as provided by Coherence.
+ * Cluster Node information as provided by Hazelcast.
  *
+ * @author Tom Evans
  * @author Gaston Dombiak
  */
-public class CoherenceClusterNodeInfo implements ClusterNodeInfo {
+public class HazelcastClusterNodeInfo implements ClusterNodeInfo {
 
     private String hostname;
     private NodeID nodeID;
     private long joinedTime;
     private boolean seniorMember;
 
-    public CoherenceClusterNodeInfo(Member member) {
-        hostname = member.getAddress().getHostName();
-        nodeID = NodeID.getInstance(member.getUid().toByteArray());
-        joinedTime = member.getTimestamp();
-        seniorMember = ClusterManager.getSeniorClusterMember().equals(member.getUid().toByteArray());
+    public HazelcastClusterNodeInfo(Member member) {
+        this(member, System.currentTimeMillis());
+    }
+
+    public HazelcastClusterNodeInfo(Member member, Long joinedTime) {
+        hostname = member.getInetSocketAddress().getHostName();
+        nodeID = NodeID.getInstance(StringUtils.getBytes(member.getUuid()));
+        this.joinedTime = joinedTime;
+        seniorMember = ClusterManager.getSeniorClusterMember().equals(StringUtils.getBytes(member.getUuid()));
     }
 
     public String getHostName() {

@@ -20,18 +20,27 @@
 
 package com.jivesoftware.util.cache;
 
-import com.tangosol.util.ExternalizableHelper;
+import java.io.DataInput;
+import java.io.DataOutput;
+import java.io.Externalizable;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import org.jivesoftware.util.cache.ExternalizableUtilStrategy;
 
-import java.io.*;
-import java.util.*;
+import com.hazelcast.nio.SerializationHelper;
 
 /**
- * Serialization strategy that uses Coherence as its underlying mechanism.
+ * Serialization strategy that uses Hazelcast as its underlying mechanism.
  *
+ * @author Tom Evans
  * @author Gaston Dombiak
  */
-public class CoherenceExternalizableUtil implements ExternalizableUtilStrategy {
+public class ClusterExternalizableUtil implements ExternalizableUtilStrategy {
 
     /**
      * Writes a Map of String key and value pairs. This method handles the
@@ -42,18 +51,7 @@ public class CoherenceExternalizableUtil implements ExternalizableUtilStrategy {
      * @throws java.io.IOException if an error occurs.
      */
     public void writeStringMap(DataOutput out, Map<String, String> stringMap) throws IOException {
-        // Format for map is an int with the number of values,
-        // followed by all String key/value pairs.
-        if (stringMap == null) {
-            out.writeInt(-1);
-        }
-        else {
-            out.writeInt(stringMap.size());
-            for (Map.Entry<String, String> entry : stringMap.entrySet()) {
-                ExternalizableHelper.writeSafeUTF(out, entry.getKey());
-                ExternalizableHelper.writeSafeUTF(out, entry.getValue());
-            }
-        }
+        SerializationHelper.writeObject(out, stringMap);
     }
 
     /**
@@ -65,19 +63,7 @@ public class CoherenceExternalizableUtil implements ExternalizableUtilStrategy {
      * @throws IOException if an error occurs.
      */
     public Map<String, String> readStringMap(DataInput in) throws IOException {
-        // Format for map is an int with the number of values,
-        // followed by all String key/value pairs.
-        int propertyCount = in.readInt();
-        if (propertyCount == -1) {
-            return null;
-        }
-        else {
-            Map<String, String> stringMap = new HashMap<String, String>();
-            for (int i = 0; i < propertyCount; i++) {
-                stringMap.put(ExternalizableHelper.readSafeUTF(in), ExternalizableHelper.readSafeUTF(in));
-            }
-            return stringMap;
-        }
+    	return (Map<String, String>) SerializationHelper.readObject(in);
     }
 
     /**
@@ -89,11 +75,7 @@ public class CoherenceExternalizableUtil implements ExternalizableUtilStrategy {
      * @throws java.io.IOException if an error occurs.
      */
     public void writeStringsMap(DataOutput out, Map<String, Set<String>> map) throws IOException {
-        out.writeInt(map.size());
-        for (Map.Entry<String, Set<String>> entry : map.entrySet()) {
-            ExternalizableHelper.writeSafeUTF(out, entry.getKey());
-            ExternalizableHelper.writeStringArray(out, entry.getValue().toArray(new String[]{}));
-        }
+        SerializationHelper.writeObject(out, map);
     }
 
     /**
@@ -105,16 +87,10 @@ public class CoherenceExternalizableUtil implements ExternalizableUtilStrategy {
      * @throws IOException if an error occurs.
      */
     public int readStringsMap(DataInput in, Map<String, Set<String>> map) throws IOException {
-        // Format for map is an int with the number of values,
-        // followed by all String key/value pairs.
-        int propertyCount = in.readInt();
-        for (int i = 0; i < propertyCount; i++) {
-            String key = ExternalizableHelper.readSafeUTF(in);
-            Set<String> value = new HashSet<String>();
-            Collections.addAll(value, ExternalizableHelper.readStringArray(in));
-            map.put(key, value);
-        }
-        return propertyCount;
+    	Map<String, Set<String>> result = (Map<String, Set<String>>) SerializationHelper.readObject(in);
+    	if (result == null) return 0;
+        map.putAll(result);
+        return result.size();
     }
 
     /**
@@ -126,18 +102,7 @@ public class CoherenceExternalizableUtil implements ExternalizableUtilStrategy {
      * @throws IOException if an error occurs.
      */
     public void writeLongIntMap(DataOutput out, Map<Long, Integer> map) throws IOException {
-        // Format for map is an int with the number of values,
-        // followed by all key/value pairs.
-        if (map == null) {
-            out.writeInt(-1);
-        }
-        else {
-            out.writeInt(map.size());
-            for (Map.Entry<Long, Integer> entry : map.entrySet()) {
-                out.writeLong(entry.getKey());
-                out.writeInt(entry.getValue());
-            }
-        }
+        SerializationHelper.writeObject(out, map);
     }
 
     /**
@@ -148,20 +113,8 @@ public class CoherenceExternalizableUtil implements ExternalizableUtilStrategy {
      * @return a Map of Long key/Integer value pairs.
      * @throws IOException if an error occurs.
      */
-    public Map readLongIntMap(DataInput in) throws IOException {
-        // Format for map is an int with the number of values,
-        // followed by all key/value pairs.
-        int propertyCount = in.readInt();
-        if (propertyCount == -1) {
-            return null;
-        }
-        else {
-            Map<Long, Integer> map = new HashMap<Long, Integer>();
-            for (int i = 0; i < propertyCount; i++) {
-                map.put(in.readLong(), in.readInt());
-            }
-            return map;
-        }
+    public Map<Long, Integer> readLongIntMap(DataInput in) throws IOException {
+        return (Map<Long, Integer>) SerializationHelper.readObject(in);
     }
 
     /**
@@ -172,18 +125,8 @@ public class CoherenceExternalizableUtil implements ExternalizableUtilStrategy {
      * @param stringList the List of Strings.
      * @throws IOException if an error occurs.
      */
-    public void writeStringList(DataOutput out, List stringList) throws IOException {
-        // Format for list is an int with the number of values,
-        // followed by all Strings.
-        if (stringList == null) {
-            out.writeInt(-1);
-        }
-        else {
-            out.writeInt(stringList.size());
-            for (int i = 0, n = stringList.size(); i < n; i++) {
-                ExternalizableHelper.writeSafeUTF(out, (String) stringList.get(i));
-            }
-        }
+    public void writeStringList(DataOutput out, List<String> stringList) throws IOException {
+        SerializationHelper.writeObject(out, stringList);
     }
 
     /**
@@ -195,19 +138,7 @@ public class CoherenceExternalizableUtil implements ExternalizableUtilStrategy {
      * @throws IOException if an error occurs.
      */
     public List<String> readStringList(DataInput in) throws IOException {
-        // Format for list is an int with the number of values,
-        // followed by all Strings.
-        int propertyCount = in.readInt();
-        if (propertyCount == -1) {
-            return null;
-        }
-        else {
-            List<String> stringList = new ArrayList<String>();
-            for (int i = 0; i < propertyCount; i++) {
-                stringList.add(ExternalizableHelper.readSafeUTF(in));
-            }
-            return stringList;
-        }
+        return (List<String>) SerializationHelper.readObject(in);
     }
 
     /**
@@ -219,14 +150,7 @@ public class CoherenceExternalizableUtil implements ExternalizableUtilStrategy {
      * @throws IOException if an error occurs.
      */
     public void writeLongArray(DataOutput out, long [] array) throws IOException {
-        if (array == null) {
-            ExternalizableHelper.writeInt(out, -1);
-            return;
-        }
-        ExternalizableHelper.writeInt(out, array.length);
-        for (long item : array) {
-            ExternalizableHelper.writeLong(out, item);
-        }
+        SerializationHelper.writeObject(out, array);
     }
 
     /**
@@ -238,107 +162,112 @@ public class CoherenceExternalizableUtil implements ExternalizableUtilStrategy {
      * @throws IOException if an error occurs.
      */
     public long [] readLongArray(DataInput in) throws IOException {
-        int size = ExternalizableHelper.readInt(in);
-        if (size == -1) {
-            return null;
-        }
-        long [] array = new long[size];
-        for (int i = 0; i < size; i++) {
-            array[i] = ExternalizableHelper.readLong(in);
-        }
-        return array;
+        return (long[]) SerializationHelper.readObject(in);
     }
 
     public void writeLong(DataOutput out, long value) throws IOException {
-        ExternalizableHelper.writeLong(out, value);
+        SerializationHelper.writeObject(out, value);
     }
 
     public long readLong(DataInput in) throws IOException {
-        return ExternalizableHelper.readLong(in);
+        return (Long) SerializationHelper.readObject(in);
     }
 
     public void writeByteArray(DataOutput out, byte[] value) throws IOException {
-        ExternalizableHelper.writeByteArray(out, value);
+        SerializationHelper.writeObject(out, value);
     }
 
     public byte[] readByteArray(DataInput in) throws IOException {
-        return ExternalizableHelper.readByteArray(in);
+    	return (byte[]) SerializationHelper.readObject(in);
     }
 
     public void writeInt(DataOutput out, int value) throws IOException {
-        ExternalizableHelper.writeInt(out, value);
+        SerializationHelper.writeObject(out, value);
     }
 
     public int readInt(DataInput in) throws IOException {
-        return ExternalizableHelper.readInt(in);
+    	return (Integer) SerializationHelper.readObject(in);
     }
 
     public void writeBoolean(DataOutput out, boolean value) throws IOException {
-        out.writeBoolean(value);
+        SerializationHelper.writeObject(out, value);
     }
 
     public boolean readBoolean(DataInput in) throws IOException {
-        return in.readBoolean();
+    	return (Boolean) SerializationHelper.readObject(in);
     }
 
     public void writeSerializable(DataOutput out, Serializable value) throws IOException {
-        ExternalizableHelper.writeSerializable(out, value);
+        SerializationHelper.writeObject(out, value);
     }
 
     public Serializable readSerializable(DataInput in) throws IOException {
-        return (Serializable) ExternalizableHelper.readSerializable(in);
+    	return (Serializable) SerializationHelper.readObject(in);
     }
 
     public void writeSafeUTF(DataOutput out, String value) throws IOException {
-        ExternalizableHelper.writeSafeUTF(out, value);
+        SerializationHelper.writeObject(out, value);
     }
 
     public String readSafeUTF(DataInput in) throws IOException {
-        return ExternalizableHelper.readSafeUTF(in);
+    	return (String) SerializationHelper.readObject(in);
     }
 
     public void writeExternalizableCollection(DataOutput out, Collection<? extends Externalizable> value)
             throws IOException {
-        ExternalizableHelper.writeCollection(out, value);
+        SerializationHelper.writeObject(out, value);
     }
 
     public void writeSerializableCollection(DataOutput out, Collection<? extends Serializable> value)
     throws IOException {
-		ExternalizableHelper.writeCollection(out, value);
+        SerializationHelper.writeObject(out, value);
     }
     public int readExternalizableCollection(DataInput in, Collection<? extends Externalizable> value,
                                             ClassLoader loader) throws IOException {
-        return ExternalizableHelper.readCollection(in, value, loader);
+    	Collection<Externalizable> result = (Collection<Externalizable>) SerializationHelper.readObject(in);
+    	if (result == null) return 0;
+    	((Collection<Externalizable>)value).addAll(result);
+    	return result.size();
     }
 
     public int readSerializableCollection(DataInput in, Collection<? extends Serializable> value,
             ClassLoader loader) throws IOException {
-    	return ExternalizableHelper.readCollection(in, value, loader);
+    	Collection<Serializable> result = (Collection<Serializable>) SerializationHelper.readObject(in);
+    	if (result == null) return 0;
+		((Collection<Serializable>)value).addAll(result);
+		return result.size();
 }
 
     public void writeExternalizableMap(DataOutput out, Map<String, ? extends Externalizable> map) throws IOException {
-        ExternalizableHelper.writeMap(out, map);
+        SerializationHelper.writeObject(out, map);
     }
 
     public void writeSerializableMap(DataOutput out, Map<? extends Serializable, ? extends Serializable> map) throws IOException {
-        ExternalizableHelper.writeMap(out, map);
+        SerializationHelper.writeObject(out, map);
     }
     
     public int readExternalizableMap(DataInput in, Map<String, ? extends Externalizable> map, ClassLoader loader) throws IOException {
-        return ExternalizableHelper.readMap(in, map, loader);
+    	Map<String, Externalizable> result = (Map<String, Externalizable>) SerializationHelper.readObject(in);
+    	if (result == null) return 0;
+		((Map<String, Externalizable>)map).putAll(result);
+		return result.size();
     }
 
     public int readSerializableMap(DataInput in, Map<? extends Serializable, ? extends Serializable> map, ClassLoader loader) throws IOException {
-        return ExternalizableHelper.readMap(in, map, loader);
+    	Map<String, Serializable> result = (Map<String, Serializable>) SerializationHelper.readObject(in);
+    	if (result == null) return 0;
+    	((Map<String, Serializable>)map).putAll(result);
+    	return result.size();
     }
     
     public void writeStrings(DataOutput out, Collection<String> collection) throws IOException {
-        ExternalizableHelper.writeStringArray(out, collection.toArray(new String[]{}));
+        SerializationHelper.writeObject(out, collection);
     }
 
     public int readStrings(DataInput in, Collection<String> collection) throws IOException {
-        String[] strings = ExternalizableHelper.readStringArray(in);
-        Collections.addAll(collection, strings);
-        return strings.length;
+        Collection<String> result = (Collection<String>) SerializationHelper.readObject(in);
+        if (result == null) return 0;
+        collection.addAll(result);
+        return result.size();
     }
 }

@@ -19,23 +19,26 @@
 
 package com.jivesoftware.util.cache;
 
-import com.tangosol.util.MapEvent;
-import com.tangosol.util.MapListener;
+import java.util.Set;
+
 import org.jivesoftware.openfire.XMPPServer;
 import org.jivesoftware.openfire.cluster.NodeID;
+import org.jivesoftware.util.StringUtils;
 
-import java.util.Set;
+import com.hazelcast.core.EntryEvent;
+import com.hazelcast.core.EntryListener;
 
 /**
  * Base listener for cache events in the cluster. This class helps keep track
  * of nodes and their elements. The actual tracking information is kept in
  * {@link ClusterListener}. This information is then used when a node goes
- * down to proper clean up can be done
+ * down to proper clean up can be done.
  *
+ * @author Tom Evans
  * @author Pete Matern
  * @author Gaston Dombiak
  */
-abstract class CacheListener implements MapListener {
+class CacheListener implements EntryListener {
     protected final String cacheName;
     private ClusterListener clusterListener;
 
@@ -44,31 +47,34 @@ abstract class CacheListener implements MapListener {
         this.cacheName = cacheName;
     }
 
-    public void entryInserted(MapEvent mapEvent) {
-        handleMapEvent(mapEvent, false);
+    public void entryAdded(EntryEvent event) {
+        handleMapEvent(event, false);
     }
 
-    public void entryUpdated(MapEvent mapEvent) {
-        handleMapEvent(mapEvent, false);
+    public void entryUpdated(EntryEvent event) {
+        handleMapEvent(event, false);
     }
 
-    public void entryDeleted(MapEvent mapEvent) {
-        handleMapEvent(mapEvent, true);
+    public void entryRemoved(EntryEvent event) {
+        handleMapEvent(event, true);
     }
 
-    void handleMapEvent(MapEvent mapEvent, boolean removal) {
-        NodeID nodeID = getNodeID(mapEvent, removal);
+    public void entryEvicted(EntryEvent event) {
+        handleMapEvent(event, true);
+    }
+
+    void handleMapEvent(EntryEvent event, boolean removal) {
+        NodeID nodeID = NodeID.getInstance(StringUtils.getBytes(event.getMember().getUuid()));
         //ignore items which this node has added
         if (!XMPPServer.getInstance().getNodeID().equals(nodeID)) {
             Set<String> sessionJIDS = clusterListener.lookupJIDList(nodeID, cacheName);
             if (removal) {
-                sessionJIDS.remove(mapEvent.getKey().toString());
+                sessionJIDS.remove(event.getKey().toString());
             }
             else {
-                sessionJIDS.add(mapEvent.getKey().toString());
+                sessionJIDS.add(event.getKey().toString());
             }
         }
     }
 
-    abstract NodeID getNodeID(MapEvent mapEvent, boolean removal);
 }

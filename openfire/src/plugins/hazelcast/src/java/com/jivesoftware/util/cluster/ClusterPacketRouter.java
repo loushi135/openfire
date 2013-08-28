@@ -20,8 +20,9 @@
 package com.jivesoftware.util.cluster;
 
 import org.jivesoftware.openfire.RemotePacketRouter;
-import org.jivesoftware.util.Log;
 import org.jivesoftware.util.cache.CacheFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xmpp.packet.JID;
 import org.xmpp.packet.Message;
 import org.xmpp.packet.Packet;
@@ -30,25 +31,22 @@ import org.xmpp.packet.Packet;
  * Route packets to other nodes of the cluster. If the remote node was not found or failed
  * to be reached then depending on the type of packet an error packet will be returned. In case
  * the remote node is reached but the remote node fails to route the packet to the recipient (e.g.
- * the receipient just left) then an error packet may be created from the remote node and send it
+ * the recipient just left) then an error packet may be created from the remote node and send it
  * back to this node.<p>
  * 
- * TODO For optimization reasons, this class instead of sending an InvocationService for each
- * packet to route to a remote node may use a smarter logic that would group a few packets into
- * a single InvocationService thus reducing network traffic. Moreover, bnux can be used as a way
- * to encode packets to send so that XML parsing is optimized on the other side.
- *
  * @author Gaston Dombiak
  */
-public class CoherencePacketRouter implements RemotePacketRouter {
+public class ClusterPacketRouter implements RemotePacketRouter {
+
+    private static Logger logger = LoggerFactory.getLogger(ClusterPacketRouter.class);
 
     public boolean routePacket(byte[] nodeID, JID receipient, Packet packet) {
-        // Send the packet to the specified node and let the remote node deliver the packet to the receipient
+        // Send the packet to the specified node and let the remote node deliver the packet to the recipient
         try {
             CacheFactory.doClusterTask(new RemotePacketExecution(receipient, packet), nodeID);
             return true;
         } catch (IllegalStateException  e) {
-            Log.warn("Error while routing packet to remote node", e);
+            logger.warn("Error while routing packet to remote node: " + e);
             return false;
         }
     }
