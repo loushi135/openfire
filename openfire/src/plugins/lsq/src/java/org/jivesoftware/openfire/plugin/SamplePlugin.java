@@ -5,9 +5,12 @@ import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
+import org.jivesoftware.openfire.IQRouter;
 import org.jivesoftware.openfire.XMPPServer;
 import org.jivesoftware.openfire.container.Plugin;
 import org.jivesoftware.openfire.container.PluginManager;
+import org.jivesoftware.openfire.handler.IQHandler;
+import org.jivesoftware.openfire.handler.IQTestrrHandler;
 import org.jivesoftware.openfire.interceptor.InterceptorManager;
 import org.jivesoftware.openfire.interceptor.PacketInterceptor;
 import org.jivesoftware.openfire.interceptor.PacketRejectedException;
@@ -38,6 +41,9 @@ public class SamplePlugin implements Plugin,PacketInterceptor {
         interceptorManager = InterceptorManager.getInstance();
         logsManager = DbChatLogsManager.getInstance();
         interceptorManager.addInterceptor(this);
+        IQHandler iqTestHandler = new IQTestrrHandler();
+        IQRouter iqRouter = XMPPServer.getInstance().getIQRouter();
+        iqRouter.addHandler(iqTestHandler);
         System.out.println("test");
 //        org.jivesoftware.util.LocaleUtils.getLocalizedString("projectName", "[myPlugin]");
         debug("init plugin start up");
