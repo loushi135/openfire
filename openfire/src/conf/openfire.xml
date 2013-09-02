@@ -20,9 +20,11 @@
         <!-- Disable either port by setting the value to -1 -->
         <port>9090</port>
         <securePort>9091</securePort>
-    </adminConsole>
-
-    <locale>en</locale>
+    </adminConsole>	
+	<admin> 
+    	<authorizedUsernames>admin</authorizedUsernames> 
+  	</admin>
+    <locale>zh_CN</locale>
 
     <!--  Network settings. By default, Openfire will bind to all network interfaces.
       Alternatively, you can specify a specific network interfaces that the server
@@ -33,9 +35,26 @@
         <interface></interface>
     </network>
     -->
-  <setup>true</setup> <!-- true表示已经安装，不用运行安装向导     false表示要重新安装-->
+  <connectionProvider>
+    <className>org.jivesoftware.database.DefaultConnectionProvider</className> 
+  </connectionProvider>
+  <database>
+    <defaultProvider> 
+      <driver>com.mysql.jdbc.Driver</driver>  
+      <serverURL>jdbc:mysql://localhost:3306/my_openfire</serverURL>  
+      <username>root</username>  
+      <password>123456</password>  
+      <testSQL>select 1</testSQL>  
+      <testBeforeUse>true</testBeforeUse>  
+      <testAfterUse>false</testAfterUse>  
+      <minConnections>5</minConnections>  
+      <maxConnections>25</maxConnections>  
+      <connectionTimeout>1.0</connectionTimeout> 
+    </defaultProvider> 
+  </database>
+  <setup>true</setup>
   <log>
-    <debug> 
+    <debug>
       <enabled>true</enabled> 
     </debug> 
   </log>
