@@ -1,0 +1,1462 @@
+2013-08-28 23:06:35,577 redfire.Application - Redfire starting in scope xmpp C:\Users\Administrator\git\openfire\openfire
+2013-08-28 23:06:35,578 redfire.Redfire - [redfire] initialize redfire redfire resources
+2013-08-28 23:06:35,578 redfire.Redfire - [redfire] Starting VOIP Server
+2013-08-28 23:06:35,587 cti.OpenlinkComponent - OpenlinkComponent
+2013-08-28 23:06:35,630 voicebridge.Application - Voip Engine version 0.0.0.1
+2013-08-28 23:06:35,686 voicebridge.Application - Starting jVoiceBridge....
+2013-08-28 23:06:35,861 voicebridge.Application - Starting jCumulus.....
+2013-08-28 23:06:35,940 voicebridge.Application - Listening on 1935 port
+2013-08-28 23:06:35,970 redfire.Redfire - [redfire] Starting Openlink Component
+2013-08-28 23:06:35,978 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="337-16" from="component.2011-20121118je" to="openlink.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:06:35,985 servlets.JmdnsServlet - Init JmdnsServlet - reporting jMDNS for 2011-20121118JE on  port 7070
+2013-08-28 23:06:47,195 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="380-24" to="openlink.2011-20121118je" from="workgroup.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:09:29,258 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="rY1Rg-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:09:29,382 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="rY1Rg-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:09:31,430 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="rY1Rg-32" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:12:50,470 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="1P38y-16" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:12:50,741 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="1P38y-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:12:52,856 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="1P38y-31" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:13:02,926 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="TDfOH-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:13:03,229 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="TDfOH-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:13:05,174 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="TDfOH-31" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:19:57,704 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="8f7RL-16" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:19:58,042 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="8f7RL-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:20:00,055 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="8f7RL-31" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:21:47,147 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Y49KU-16" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:21:47,503 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Y49KU-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:21:49,497 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Y49KU-31" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:25:00,100 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="IFI78-16" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:25:00,461 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="IFI78-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:25:04,719 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="IFI78-31" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:29:53,450 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="m9482-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:29:53,816 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="m9482-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:29:55,820 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="m9482-31" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:34:25,220 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Cq60H-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:34:25,592 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Cq60H-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:34:27,570 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Cq60H-31" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:34:36,532 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="KaE22-16" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:34:36,920 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="KaE22-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:34:38,893 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="KaE22-31" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:36:46,174 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="XRPS0-16" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:36:46,429 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="XRPS0-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:36:48,615 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="XRPS0-31" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:37:01,439 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="N3TG5-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:37:01,752 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="N3TG5-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-28 23:37:03,763 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="N3TG5-31" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 08:53:07,263 redfire.Application - Redfire starting in scope xmpp C:\Users\Administrator\git\openfire\openfire
+2013-08-29 08:53:07,284 redfire.Redfire - [redfire] initialize redfire redfire resources
+2013-08-29 08:53:07,284 redfire.Redfire - [redfire] Starting VOIP Server
+2013-08-29 08:53:07,291 cti.OpenlinkComponent - OpenlinkComponent
+2013-08-29 08:53:07,340 voicebridge.Application - Voip Engine version 0.0.0.1
+2013-08-29 08:53:07,433 voicebridge.Application - Starting jVoiceBridge....
+2013-08-29 08:53:07,636 voicebridge.Application - Starting jCumulus.....
+2013-08-29 08:53:07,709 voicebridge.Application - Listening on 1935 port
+2013-08-29 08:53:07,740 redfire.Redfire - [redfire] Starting Openlink Component
+2013-08-29 08:53:07,749 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="677-25" from="component.2011-20121118je" to="openlink.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 08:53:07,758 servlets.JmdnsServlet - Init JmdnsServlet - reporting jMDNS for 2011-20121118JE on  port 7070
+2013-08-29 08:53:50,085 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="5A03g-16" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 08:53:50,200 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="5A03g-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 08:53:59,377 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="5A03g-32" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 08:59:53,882 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Ud9Hc-18" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 08:59:54,076 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Ud9Hc-29" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 08:59:56,019 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Ud9Hc-34" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 09:24:13,231 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="5yPQ8-18" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 09:24:13,410 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="5yPQ8-29" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 09:24:15,326 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="5yPQ8-33" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 09:24:42,811 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="mO7y8-18" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 09:24:43,091 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="mO7y8-29" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 09:24:44,981 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="mO7y8-33" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 09:33:26,246 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="fI153-19" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 09:35:12,613 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="I2RIQ-19" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 09:35:41,096 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="KcvoL-18" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 09:35:41,389 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="KcvoL-29" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 09:35:43,323 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="KcvoL-33" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 09:44:10,259 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="uefGz-19" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 09:44:12,224 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="uefGz-22" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 09:49:55,036 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="nkwwP-19" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 09:49:56,850 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="nkwwP-22" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:00:35,033 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="n38o6-19" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:00:36,634 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="n38o6-30" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:00:36,964 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="n38o6-33" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:00:55,593 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="L0h5f-17" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:00:57,188 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="L0h5f-28" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:00:57,561 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="L0h5f-31" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:04:36,950 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="PpPsN-17" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:04:38,542 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="PpPsN-28" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:04:38,901 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="PpPsN-31" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:05:15,062 redfire.Application - Redfire starting in scope xmpp C:\Users\Administrator\git\openfire\openfire
+2013-08-29 10:05:15,063 redfire.Redfire - [redfire] initialize redfire redfire resources
+2013-08-29 10:05:15,063 redfire.Redfire - [redfire] Starting VOIP Server
+2013-08-29 10:05:15,070 cti.OpenlinkComponent - OpenlinkComponent
+2013-08-29 10:05:15,081 voicebridge.Application - Voip Engine version 0.0.0.1
+2013-08-29 10:05:15,134 voicebridge.Application - Starting jVoiceBridge....
+2013-08-29 10:05:15,247 voicebridge.Application - Starting jCumulus.....
+2013-08-29 10:05:15,297 voicebridge.Application - Listening on 1935 port
+2013-08-29 10:05:15,333 redfire.Redfire - [redfire] Starting Openlink Component
+2013-08-29 10:05:15,345 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="312-15" from="component.2011-20121118je" to="openlink.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:05:15,356 servlets.JmdnsServlet - Init JmdnsServlet - reporting jMDNS for 2011-20121118JE on  port 7070
+2013-08-29 10:05:18,679 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="405-23" to="openlink.2011-20121118je" from="workgroup.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:06:11,433 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="jR2wV-17" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:06:12,966 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="jR2wV-28" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:06:13,182 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="jR2wV-31" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:07:03,735 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="i6O4t-17" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:07:05,352 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="i6O4t-28" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:07:05,671 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="i6O4t-31" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/jim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:23:01,655 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="a9eQl-18" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:23:01,794 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="a9eQl-29" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:23:37,193 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="JU9lC-18" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:23:37,353 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="JU9lC-29" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:25:32,288 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="c30BF-18" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:25:32,507 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="c30BF-29" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:25:42,761 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="TFGdy-18" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:25:42,973 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="TFGdy-29" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 10:31:24,657 redfire.Application - Redfire Client connected 0 service RTMPMinaConnection from 127.0.0.1 : 53799 to  (in: 3515 out 3073 )
+2013-08-29 10:31:24,657 redfire.Application - Redfire Client joined app 0
+2013-08-29 10:32:07,537 redfire.Application - Redfire Client connected 1 service RTMPMinaConnection from 127.0.0.1 : 53811 to  (in: 3544 out 3073 )
+2013-08-29 10:32:07,537 redfire.Application - Redfire Client joined app 1
+2013-08-29 10:33:56,088 redfire.Application - Redfire Client leaving app 0
+2013-08-29 10:33:56,847 redfire.Application - Redfire Client connected 2 service RTMPMinaConnection from 127.0.0.1 : 53835 to  (in: 3515 out 3073 )
+2013-08-29 10:33:56,847 redfire.Application - Redfire Client joined app 2
+2013-08-29 10:34:10,696 redfire.Application - Redfire Client leaving app 1
+2013-08-29 10:34:11,493 redfire.Application - Redfire Client connected 3 service RTMPMinaConnection from 127.0.0.1 : 53836 to  (in: 3544 out 3073 )
+2013-08-29 10:34:11,493 redfire.Application - Redfire Client joined app 3
+2013-08-29 10:34:12,412 redfire.Application - Redfire Client leaving app 3
+2013-08-29 10:34:13,231 redfire.Application - Redfire Client leaving app 2
+2013-08-29 11:11:23,187 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="6mgRJ-18" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:11:23,328 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="6mgRJ-29" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:14:36,228 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="DDht8-18" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:14:36,580 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="DDht8-29" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:15:04,777 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="JWaJ6-18" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:15:04,954 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="JWaJ6-29" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:18:32,698 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="qgkI1-17" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:18:32,959 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="qgkI1-29" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:21:14,577 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="93fpX-17" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:21:14,904 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="93fpX-29" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:23:36,989 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="YtXJU-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:23:37,364 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="YtXJU-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:25:07,546 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="WWcbq-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:25:07,921 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="WWcbq-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:26:19,950 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="pBtL1-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:26:20,257 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="pBtL1-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:58:10,920 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="C1XMX-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 11:58:11,239 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="C1XMX-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 12:13:04,345 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="58477-15" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 12:13:04,734 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="58477-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 13:19:39,662 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="LVpbd-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 13:19:39,998 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="LVpbd-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 13:31:59,328 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Xk8l0-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 13:31:59,577 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Xk8l0-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 15:37:52,680 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="370kr-15" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 15:37:52,997 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="370kr-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 15:47:50,696 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="rwGqQ-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 15:47:51,076 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="rwGqQ-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 15:48:56,357 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="TLy12-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 15:48:56,713 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="TLy12-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 15:53:36,925 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Ww125-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 15:53:37,246 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Ww125-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 15:54:22,889 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Qdc96-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 15:54:23,251 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Qdc96-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:00:58,524 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="4P3Jp-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:00:58,842 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="4P3Jp-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:23:26,491 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="KX6Mp-21" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:23:26,515 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="KX6Mp-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:23:54,471 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="T8db9-16" to="openlink.2011-20121118je" type="get" from="admin@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:23:54,787 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="T8db9-30" to="openlink.2011-20121118je" type="get" from="admin@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:29:20,230 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="I76U6-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:29:20,554 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="I76U6-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:29:29,179 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="3Qfm0-16" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:29:29,494 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="3Qfm0-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:30:04,078 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="qC5m7-15" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:30:04,454 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="qC5m7-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:30:16,794 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="7xGYW-15" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:30:17,131 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="7xGYW-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:30:22,166 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="7xGYW-41" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:32:33,592 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="7xGYW-67" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:44:05,873 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="gKDzi-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:44:06,196 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="gKDzi-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:44:14,671 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="wF9Bt-15" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:44:15,067 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="wF9Bt-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:45:30,710 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Uvuh7-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:45:30,971 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Uvuh7-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:45:40,253 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="8uwJx-16" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 16:45:40,513 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="8uwJx-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 17:06:38,460 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="0Nj3E-15" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 17:06:38,795 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="0Nj3E-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 17:08:26,024 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="8sIUB-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-29 17:08:26,330 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="8sIUB-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:24:29,010 redfire.Application - Redfire starting in scope xmpp C:\Users\Administrator\git\openfire\openfire
+2013-08-30 10:24:29,025 redfire.Redfire - [redfire] initialize redfire redfire resources
+2013-08-30 10:24:29,025 redfire.Redfire - [redfire] Starting VOIP Server
+2013-08-30 10:24:29,033 cti.OpenlinkComponent - OpenlinkComponent
+2013-08-30 10:24:29,095 voicebridge.Application - Voip Engine version 0.0.0.1
+2013-08-30 10:24:29,166 voicebridge.Application - Starting jVoiceBridge....
+2013-08-30 10:24:29,376 voicebridge.Application - Starting jCumulus.....
+2013-08-30 10:24:29,455 voicebridge.Application - Listening on 1935 port
+2013-08-30 10:24:29,489 redfire.Redfire - [redfire] Starting Openlink Component
+2013-08-30 10:24:29,499 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="829-25" from="component.2011-20121118je" to="openlink.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:24:29,507 servlets.JmdnsServlet - Init JmdnsServlet - reporting jMDNS for 2011-20121118JE on  port 7070
+2013-08-30 10:24:45,667 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="zIY80-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:24:46,171 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="zIY80-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:31:13,314 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="cJh6M-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:31:13,630 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="cJh6M-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:32:06,674 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="BJF56-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:32:07,002 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="BJF56-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:34:00,992 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="t9T6c-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:34:01,388 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="t9T6c-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:41:13,629 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="9ie47-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:41:14,009 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="9ie47-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:42:21,852 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="78e0N-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:42:22,072 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="78e0N-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:56:27,937 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="WBN63-16" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:56:28,260 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="WBN63-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:57:20,036 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="5ht8S-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 10:57:20,450 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="5ht8S-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:01:58,972 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="nn2z3-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:01:59,363 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="nn2z3-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:06:03,670 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="pqoTX-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:06:04,031 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="pqoTX-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:07:14,784 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="O30S1-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:07:15,178 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="O30S1-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:12:10,979 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="SJgc7-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:12:11,329 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="SJgc7-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:14:54,563 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="sVwGP-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:14:54,743 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="sVwGP-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:17:07,523 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="ppbBt-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:17:07,855 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="ppbBt-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:18:41,451 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="ljI7S-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:18:41,752 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="ljI7S-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:23:24,359 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="uMFpU-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:23:24,720 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="uMFpU-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:25:09,533 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="WxbvU-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:25:09,867 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="WxbvU-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:54:23,579 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="afGC6-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:54:23,786 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="afGC6-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:54:41,544 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Qpz9K-16" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 11:54:41,756 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="Qpz9K-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 12:08:09,690 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="sTu9l-16" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 12:08:10,102 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="sTu9l-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 12:08:18,612 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="aDUf0-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 12:08:18,900 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="aDUf0-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 12:20:25,629 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="68n4z-16" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 12:20:25,955 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="68n4z-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 12:20:34,376 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="5QMzN-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 12:20:34,712 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="5QMzN-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 12:21:29,009 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="T0HlL-16" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 12:21:29,338 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="T0HlL-27" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 12:21:38,425 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="l2O1u-16" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 12:21:38,796 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="l2O1u-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:26:29,063 redfire.Application - Redfire starting in scope xmpp C:\Users\Administrator\git\openfire\openfire
+2013-08-30 13:26:29,066 redfire.Redfire - [redfire] initialize redfire redfire resources
+2013-08-30 13:26:29,066 redfire.Redfire - [redfire] Starting VOIP Server
+2013-08-30 13:26:29,076 cti.OpenlinkComponent - OpenlinkComponent
+2013-08-30 13:26:29,136 voicebridge.Application - Voip Engine version 0.0.0.1
+2013-08-30 13:26:29,203 voicebridge.Application - Starting jVoiceBridge....
+2013-08-30 13:26:29,414 voicebridge.Application - Starting jCumulus.....
+2013-08-30 13:26:29,475 voicebridge.Application - Listening on 1935 port
+2013-08-30 13:26:29,516 redfire.Redfire - [redfire] Starting Openlink Component
+2013-08-30 13:26:29,526 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="25-15" from="component.2011-20121118je" to="openlink.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:26:29,533 servlets.JmdnsServlet - Init JmdnsServlet - reporting jMDNS for 2011-20121118JE on  port 7070
+2013-08-30 13:26:32,091 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="368-23" to="openlink.2011-20121118je" from="workgroup.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:27:10,443 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="N1H6M-21" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:27:10,543 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="N1H6M-27" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:32:51,828 redfire.Application - Redfire starting in scope xmpp C:\Users\Administrator\git\openfire\openfire
+2013-08-30 13:32:51,830 redfire.Redfire - [redfire] initialize redfire redfire resources
+2013-08-30 13:32:51,830 redfire.Redfire - [redfire] Starting VOIP Server
+2013-08-30 13:32:51,843 cti.OpenlinkComponent - OpenlinkComponent
+2013-08-30 13:32:51,858 voicebridge.Application - Voip Engine version 0.0.0.1
+2013-08-30 13:32:51,913 voicebridge.Application - Starting jVoiceBridge....
+2013-08-30 13:32:52,115 voicebridge.Application - Starting jCumulus.....
+2013-08-30 13:32:52,180 voicebridge.Application - Listening on 1935 port
+2013-08-30 13:32:52,216 redfire.Redfire - [redfire] Starting Openlink Component
+2013-08-30 13:32:52,232 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="629-15" from="component.2011-20121118je" to="openlink.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:32:52,237 servlets.JmdnsServlet - Init JmdnsServlet - reporting jMDNS for 2011-20121118JE on  port 7070
+2013-08-30 13:32:55,413 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="203-23" to="openlink.2011-20121118je" from="workgroup.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:37:06,586 redfire.Application - Redfire starting in scope xmpp C:\Users\Administrator\git\openfire\openfire
+2013-08-30 13:37:06,589 redfire.Redfire - [redfire] initialize redfire redfire resources
+2013-08-30 13:37:06,590 redfire.Redfire - [redfire] Starting VOIP Server
+2013-08-30 13:37:06,603 cti.OpenlinkComponent - OpenlinkComponent
+2013-08-30 13:37:06,620 voicebridge.Application - Voip Engine version 0.0.0.1
+2013-08-30 13:37:06,706 voicebridge.Application - Starting jVoiceBridge....
+2013-08-30 13:37:06,878 voicebridge.Application - Starting jCumulus.....
+2013-08-30 13:37:06,944 voicebridge.Application - Listening on 1935 port
+2013-08-30 13:37:06,980 redfire.Redfire - [redfire] Starting Openlink Component
+2013-08-30 13:37:06,991 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="793-15" from="component.2011-20121118je" to="openlink.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:37:07,000 servlets.JmdnsServlet - Init JmdnsServlet - reporting jMDNS for 2011-20121118JE on  port 7070
+2013-08-30 13:37:10,166 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="325-23" to="openlink.2011-20121118je" from="workgroup.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:38:15,259 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="a3m5o-25" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:38:15,287 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="a3m5o-30" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:42:57,750 redfire.Application - Redfire starting in scope xmpp C:\Users\Administrator\git\openfire\openfire
+2013-08-30 13:42:57,752 redfire.Redfire - [redfire] initialize redfire redfire resources
+2013-08-30 13:42:57,752 redfire.Redfire - [redfire] Starting VOIP Server
+2013-08-30 13:42:57,760 cti.OpenlinkComponent - OpenlinkComponent
+2013-08-30 13:42:57,772 voicebridge.Application - Voip Engine version 0.0.0.1
+2013-08-30 13:42:57,958 voicebridge.Application - Starting jVoiceBridge....
+2013-08-30 13:42:58,121 voicebridge.Application - Starting jCumulus.....
+2013-08-30 13:42:58,200 voicebridge.Application - Listening on 1935 port
+2013-08-30 13:42:58,242 redfire.Redfire - [redfire] Starting Openlink Component
+2013-08-30 13:42:58,255 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="776-15" from="component.2011-20121118je" to="openlink.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:42:58,264 servlets.JmdnsServlet - Init JmdnsServlet - reporting jMDNS for 2011-20121118JE on  port 7070
+2013-08-30 13:43:01,476 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="352-23" to="openlink.2011-20121118je" from="workgroup.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:53:56,536 redfire.Application - Redfire starting in scope xmpp C:\Users\Administrator\git\openfire\openfire
+2013-08-30 13:53:56,538 redfire.Redfire - [redfire] initialize redfire redfire resources
+2013-08-30 13:53:56,538 redfire.Redfire - [redfire] Starting VOIP Server
+2013-08-30 13:53:56,545 cti.OpenlinkComponent - OpenlinkComponent
+2013-08-30 13:53:56,556 voicebridge.Application - Voip Engine version 0.0.0.1
+2013-08-30 13:53:56,679 voicebridge.Application - Starting jVoiceBridge....
+2013-08-30 13:53:56,814 voicebridge.Application - Starting jCumulus.....
+2013-08-30 13:53:56,864 voicebridge.Application - Listening on 1935 port
+2013-08-30 13:53:56,919 redfire.Redfire - [redfire] Starting Openlink Component
+2013-08-30 13:53:56,924 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="684-15" from="component.2011-20121118je" to="openlink.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:53:56,931 servlets.JmdnsServlet - Init JmdnsServlet - reporting jMDNS for 2011-20121118JE on  port 7070
+2013-08-30 13:54:00,435 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="628-23" to="openlink.2011-20121118je" from="workgroup.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:56:23,015 redfire.Application - Redfire starting in scope xmpp C:\Users\Administrator\git\openfire\openfire
+2013-08-30 13:56:23,016 redfire.Redfire - [redfire] initialize redfire redfire resources
+2013-08-30 13:56:23,016 redfire.Redfire - [redfire] Starting VOIP Server
+2013-08-30 13:56:23,023 cti.OpenlinkComponent - OpenlinkComponent
+2013-08-30 13:56:23,034 voicebridge.Application - Voip Engine version 0.0.0.1
+2013-08-30 13:56:23,151 voicebridge.Application - Starting jVoiceBridge....
+2013-08-30 13:56:23,271 voicebridge.Application - Starting jCumulus.....
+2013-08-30 13:56:23,320 voicebridge.Application - Listening on 1935 port
+2013-08-30 13:56:23,349 redfire.Redfire - [redfire] Starting Openlink Component
+2013-08-30 13:56:23,354 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="588-15" from="component.2011-20121118je" to="openlink.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:56:23,361 servlets.JmdnsServlet - Init JmdnsServlet - reporting jMDNS for 2011-20121118JE on  port 7070
+2013-08-30 13:56:26,980 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="160-23" to="openlink.2011-20121118je" from="workgroup.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:57:26,627 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="8KXnM-18" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 13:57:26,805 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="8KXnM-29" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 14:00:24,599 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="n0zix-20" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 14:00:24,749 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="n0zix-31" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 14:09:43,796 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="yx4Os-20" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 14:09:44,074 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="yx4Os-31" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 14:15:07,581 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="851A6-20" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 14:15:07,774 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="851A6-31" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 14:17:55,151 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="QCgr4-18" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 14:17:55,391 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="QCgr4-29" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 15:49:36,304 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="W0HxL-20" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 15:49:36,439 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="W0HxL-31" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 16:00:18,907 redfire.Application - Redfire starting in scope xmpp C:\Users\Administrator\git\openfire\openfire
+2013-08-30 16:00:18,909 redfire.Redfire - [redfire] initialize redfire redfire resources
+2013-08-30 16:00:18,909 redfire.Redfire - [redfire] Starting VOIP Server
+2013-08-30 16:00:18,917 cti.OpenlinkComponent - OpenlinkComponent
+2013-08-30 16:00:18,930 voicebridge.Application - Voip Engine version 0.0.0.1
+2013-08-30 16:00:19,068 voicebridge.Application - Starting jVoiceBridge....
+2013-08-30 16:00:19,207 voicebridge.Application - Starting jCumulus.....
+2013-08-30 16:00:19,250 voicebridge.Application - Listening on 1935 port
+2013-08-30 16:00:19,282 redfire.Redfire - [redfire] Starting Openlink Component
+2013-08-30 16:00:19,293 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="587-15" from="component.2011-20121118je" to="openlink.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 16:00:19,298 servlets.JmdnsServlet - Init JmdnsServlet - reporting jMDNS for 2011-20121118JE on  port 7070
+2013-08-30 16:00:44,945 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="32B7a-22" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 16:00:44,992 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="32B7a-30" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 16:05:43,049 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="06Yjq-19" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 16:05:43,304 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="06Yjq-30" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 16:20:47,753 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="uMN1R-17" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 16:20:48,007 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="uMN1R-28" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 16:21:12,469 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="uMN1R-46" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 16:39:16,058 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="tFTPf-17" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-08-30 16:39:16,317 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="tFTPf-28" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-01 00:11:55,286 redfire.Application - Redfire starting in scope xmpp C:\Users\Administrator\git\openfire\openfire
+2013-09-01 00:11:55,305 redfire.Redfire - [redfire] initialize redfire redfire resources
+2013-09-01 00:11:55,305 redfire.Redfire - [redfire] Starting VOIP Server
+2013-09-01 00:11:55,312 cti.OpenlinkComponent - OpenlinkComponent
+2013-09-01 00:11:55,368 voicebridge.Application - Voip Engine version 0.0.0.1
+2013-09-01 00:11:55,471 voicebridge.Application - Starting jVoiceBridge....
+2013-09-01 00:11:55,682 voicebridge.Application - Starting jCumulus.....
+2013-09-01 00:11:55,750 voicebridge.Application - Listening on 1935 port
+2013-09-01 00:11:55,778 redfire.Redfire - [redfire] Starting Openlink Component
+2013-09-01 00:11:55,786 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="496-15" from="component.2011-20121118je" to="openlink.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-01 00:11:55,792 servlets.JmdnsServlet - Init JmdnsServlet - reporting jMDNS for 2011-20121118JE on  port 7070
+2013-09-01 00:17:29,766 redfire.Application - Redfire starting in scope xmpp C:\Users\Administrator\git\openfire\openfire
+2013-09-01 00:17:29,767 redfire.Redfire - [redfire] initialize redfire redfire resources
+2013-09-01 00:17:29,767 redfire.Redfire - [redfire] Starting VOIP Server
+2013-09-01 00:17:29,775 cti.OpenlinkComponent - OpenlinkComponent
+2013-09-01 00:17:29,786 voicebridge.Application - Voip Engine version 0.0.0.1
+2013-09-01 00:17:29,869 voicebridge.Application - Starting jVoiceBridge....
+2013-09-01 00:17:29,996 voicebridge.Application - Starting jCumulus.....
+2013-09-01 00:17:30,041 voicebridge.Application - Listening on 1935 port
+2013-09-01 00:17:30,068 redfire.Redfire - [redfire] Starting Openlink Component
+2013-09-01 00:17:30,074 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="980-15" from="component.2011-20121118je" to="openlink.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-01 00:17:30,082 servlets.JmdnsServlet - Init JmdnsServlet - reporting jMDNS for 2011-20121118JE on  port 7070
+2013-09-01 11:13:42,988 redfire.Application - Redfire starting in scope xmpp C:\Users\Administrator\git\openfire\openfire
+2013-09-01 11:13:43,002 redfire.Redfire - [redfire] initialize redfire redfire resources
+2013-09-01 11:13:43,002 redfire.Redfire - [redfire] Starting VOIP Server
+2013-09-01 11:13:43,010 cti.OpenlinkComponent - OpenlinkComponent
+2013-09-01 11:13:43,067 voicebridge.Application - Voip Engine version 0.0.0.1
+2013-09-01 11:13:43,174 voicebridge.Application - Starting jVoiceBridge....
+2013-09-01 11:13:43,610 voicebridge.Application - Starting jCumulus.....
+2013-09-01 11:13:43,675 voicebridge.Application - Listening on 1935 port
+2013-09-01 11:13:43,702 redfire.Redfire - [redfire] Starting Openlink Component
+2013-09-01 11:13:43,708 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="58-15" from="component.2011-20121118je" to="openlink.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-01 11:13:43,714 servlets.JmdnsServlet - Init JmdnsServlet - reporting jMDNS for 2011-20121118JE on  port 7070
+2013-09-01 11:14:34,392 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="53Fjj-17" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-01 11:14:34,721 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="53Fjj-28" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-01 11:15:08,481 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="E0ob2-17" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-01 11:15:08,832 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="E0ob2-28" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 12:21:32,416 redfire.Application - Redfire starting in scope xmpp C:\Users\Administrator\git\openfire\openfire
+2013-09-02 12:21:32,444 redfire.Redfire - [redfire] initialize redfire redfire resources
+2013-09-02 12:21:32,444 redfire.Redfire - [redfire] Starting VOIP Server
+2013-09-02 12:21:32,452 cti.OpenlinkComponent - OpenlinkComponent
+2013-09-02 12:21:32,514 voicebridge.Application - Voip Engine version 0.0.0.1
+2013-09-02 12:21:32,641 voicebridge.Application - Starting jVoiceBridge....
+2013-09-02 12:21:32,933 voicebridge.Application - Starting jCumulus.....
+2013-09-02 12:21:33,041 voicebridge.Application - Listening on 1935 port
+2013-09-02 12:21:33,073 redfire.Redfire - [redfire] Starting Openlink Component
+2013-09-02 12:21:33,081 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq type="get" id="918-15" from="component.2011-20121118je" to="openlink.2011-20121118je">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 12:21:33,089 servlets.JmdnsServlet - Init JmdnsServlet - reporting jMDNS for 2011-20121118JE on  port 7070
+2013-09-02 12:36:39,073 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="5Q8MU-17" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 12:36:39,368 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="5Q8MU-28" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 13:21:03,692 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="STqv5-17" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 13:21:03,955 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="STqv5-28" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 13:40:22,674 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="KSwCD-17" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 13:40:22,921 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="KSwCD-28" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 13:40:24,986 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="KSwCD-31" to="openlink.2011-20121118je" type="get" from="wzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 13:40:33,084 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="UWaKL-17" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 13:40:33,418 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="UWaKL-28" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 13:40:35,457 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="UWaKL-32" to="openlink.2011-20121118je" type="get" from="mzhu@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 13:41:34,873 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="8qXwh-17" to="openlink.2011-20121118je" type="get" from="cchen@2011-20121118je/Spark 2.6.3">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 13:41:35,229 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="8qXwh-28" to="openlink.2011-20121118je" type="get" from="cchen@2011-20121118je/Spark 2.6.3">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 13:41:36,920 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="8qXwh-34" to="openlink.2011-20121118je" type="get" from="cchen@2011-20121118je/Spark 2.6.3">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 14:10:09,202 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="DkUfu-20" to="openlink.2011-20121118je" type="get" from="cchen@2011-20121118je/Spark 2.6.3">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 14:10:09,359 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="DkUfu-28" to="openlink.2011-20121118je" type="get" from="cchen@2011-20121118je/Spark 2.6.3">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 14:10:11,116 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="DkUfu-31" to="openlink.2011-20121118je" type="get" from="cchen@2011-20121118je/Spark 2.6.3">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 14:20:10,918 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="N41oT-17" to="openlink.2011-20121118je" type="get" from="admin@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 14:20:11,314 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="N41oT-28" to="openlink.2011-20121118je" type="get" from="admin@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
+2013-09-02 14:20:13,299 cti.OpenlinkComponent - handleDiscoInfo 
+
+<iq id="N41oT-34" to="openlink.2011-20121118je" type="get" from="admin@2011-20121118je/lim 1.0.0">
+  <query xmlns="http://jabber.org/protocol/disco#info"/>
+</iq>
