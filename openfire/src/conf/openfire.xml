@@ -24,7 +24,7 @@
 
     <locale>en</locale>
 
-    <!-- Network settings. By default, Openfire will bind to all network interfaces.
+    <!--  Network settings. By default, Openfire will bind to all network interfaces.
       Alternatively, you can specify a specific network interfaces that the server
       will listen on. For example, 127.0.0.1. This setting is generally only useful
        on multi-homed servers. -->
@@ -33,4 +33,10 @@
         <interface></interface>
     </network>
     -->
+  <setup>true</setup> <!-- true表示已经安装，不用运行安装向导     false表示要重新安装-->
+  <log>
+    <debug> 
+      <enabled>true</enabled> 
+    </debug> 
+  </log>
 </jive>
